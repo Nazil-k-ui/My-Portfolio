@@ -3,6 +3,20 @@ section {
   margin-bottom: 100px;
 }
 
+header {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 .normal {
   font-weight: 400;
 }
@@ -14,6 +28,14 @@ section {
   .hero-title {
     font-size: 36px;
   }
+}
+
+.inMini {
+  height: 40px;
+  border-radius: 8px;
+  background-color: #FFF;
+  text-align: center;
+  padding-top: 10px;
 }
 
 .header-mobile {
@@ -50,6 +72,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   margin: 20px 0;
+  background-color: antiquewhite;
 }
 @media (max-width: 960px) {
   header {
@@ -65,7 +88,7 @@ header {
 }
 
 .resume-btn {
-  background-color: black;
+  background-color: rgb(182, 73, 73);
   color: #FFF;
   padding: 17px 20px;
   border-radius: 8px;
@@ -140,12 +163,12 @@ header {
       -ms-flex-align: center;
           align-items: center;
 }
-.hero-links .hero-icon {
+.hero-links .hero-icon img {
   padding: 14px 11px;
   width: 64px;
   height: 64px;
   border-radius: 8px;
-  border: 1px solid black;
+  border: 1px solid rgb(182, 73, 73);
 }
 @media (max-width: 480px) {
   .hero-links {
@@ -153,22 +176,25 @@ header {
   }
 }
 
-.in {
-  font-size: 30px;
-}
-
 .hero-description {
   max-width: 701px;
   font-size: 24px;
   font-weight: 400;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(143, 42, 42, 0.6);
 }
 
 .hero-image {
   margin-left: auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
 }
 .hero-image img {
-  width: 100%;
+  width: 40%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -189,7 +215,7 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 20px;
+  gap: 100px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -223,7 +249,7 @@ header {
           align-items: center;
   gap: 16px;
   border-radius: 8px;
-  border: 1px solid black;
+  border: 1px solid rgb(182, 73, 73);
 }
 .skill-card i {
   font-size: 48px;
@@ -235,7 +261,7 @@ header {
 
 .white {
   color: #FFF;
-  background-color: black;
+  background-color: rgb(182, 73, 73);
 }
 @media (max-width: 1280px) {
   .white {
@@ -252,6 +278,7 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 20px;
+  padding-bottom: 60px;
 }
 
 .experience-card {
@@ -265,7 +292,7 @@ header {
   gap: 16px;
   padding: 24px 16px;
   border-radius: 8px;
-  border: 1px solid #FFF;
+  border: 1px solid rgb(182, 73, 73);
 }
 .experience-card .header-wrapper {
   display: -webkit-box;
@@ -321,7 +348,7 @@ header {
   gap: 20px;
   font-size: 16px;
   line-height: 26px;
-  color: rgba(0, 0, 0, 0.6);
+  color: black;
 }
 @media (max-width: 1280px) {
   .about-content {
@@ -331,8 +358,13 @@ header {
   }
 }
 
+.avatar {
+  width: 100%;
+}
+
 .avatar-wrapper {
   margin-left: auto;
+  height: 70%;
 }
 .avatar-wrapper img {
   height: 100%;
@@ -362,6 +394,7 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 32px;
+  padding-bottom: 70px;
 }
 
 .project {
@@ -466,7 +499,7 @@ header {
 }
 .contacts .description {
   margin: 32px 0;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(143, 42, 42, 0.6);
   line-height: 24px;
 }
 @media (max-width: 728px) {
@@ -500,8 +533,8 @@ header {
 }
 
 label {
-  border: 1px solid black;
   border-radius: 8px;
+  border: 1px solid rgb(182, 73, 73);
   width: 495px;
   height: 57px;
   padding: 16px 0 16px 12px;
@@ -561,12 +594,13 @@ textarea {
 }
 
 .finish {
-  border: 1px solid black;
+  border-radius: 8px;
+  border: 1px solid rgb(182, 73, 73);
   width: 528px;
   text-align: center;
   padding: 21px 0;
   border-radius: 8px;
-  background-color: black;
+  background-color: rgb(182, 73, 73);
   color: #FFF;
 }
 

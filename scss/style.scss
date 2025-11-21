@@ -1,18 +1,40 @@
-$primary-color: black;
-$fomt-color: #00000099;
+$primary-color: rgb(182, 73, 73);
+$fomt-color: #8f2a2a99;
 $white: #FFF;
 $main-fz: 48px;
+
+@mixin bor-bor {
+    border-radius: 8px;
+    border: 1px solid $primary-color;
+}
 
 @mixin flex-col {
     display: flex;
     flex-direction: column;
 }
 
+.myImg {
+    // width: 500px;
+    // @include bor-bor;
+}
+
 section {
     margin-top: 100px;
     margin-bottom: 100px;
 }
+header {
+    display: block;
+}
 
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 // section:nth-child(3) {
 //     background-color: $primary-color;
 // }
@@ -30,6 +52,14 @@ section {
     @media (max-width:480px) {
         font-size: 36px;
     }
+}
+
+.inMini {
+    height: 40px;
+    border-radius: 8px;
+    background-color: $white;
+    text-align: center;
+    padding-top: 10px;
 }
 
 .header-mobile {
@@ -51,6 +81,7 @@ header {
     justify-content: space-between;
     align-items: center;
     margin: 20px 0;
+    background-color: antiquewhite;
     @media (max-width: 960px) {
         display: none;
     }
@@ -109,20 +140,17 @@ header {
     gap: 48px;
     justify-content: left;
     align-items: center;
-    .hero-icon {
+    .hero-icon img{
         padding: 14px 11px;
         width: 64px;
         height: 64px;
-        border-radius: 8px;
-        border: 1px solid $primary-color;
+        @include bor-bor;
     }
     @media (max-width:480px) {
         gap: 16px;
     }
 }
-.in {
-    font-size: 30px;
-}
+
 .hero-description {
     max-width: 701px;
     font-size: 24px;
@@ -132,8 +160,11 @@ header {
 
 .hero-image {
     margin-left: auto;
+    width: 100%;
+    display: flex;
+    justify-content: end;
     img {
-        width: 100%;
+        width: 40%;
         height: 100%;
         object-fit: cover;
     }
@@ -146,7 +177,7 @@ header {
 .skills-container {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 100px;
     flex-wrap: wrap;
     @media (max-width: 728px) {
         padding: 0 40px;
@@ -165,8 +196,7 @@ header {
     justify-content: center;
     align-items: center;
     gap: 16px;
-    border-radius: 8px;
-    border: 1px solid $primary-color;
+    @include bor-bor;
     i {
         font-size: $main-fz;
     }
@@ -178,7 +208,7 @@ header {
 
 .white {
     color: $white;
-    background-color: black;
+    background-color: $primary-color;
     @media (max-width: 1280px) {
         padding: 100px 40px;
     }
@@ -187,14 +217,14 @@ header {
 .experience-container {
     @include flex-col;
     gap: 20px;
+    padding-bottom: 60px;
 }
 
 .experience-card {
     @include flex-col;
     gap: 16px;
     padding: 24px 16px;
-    border-radius: 8px;
-    border: 1px solid $white;
+    @include bor-bor;
     .header-wrapper {
         display: flex;
         gap: 24px;
@@ -232,14 +262,20 @@ header {
         gap: 20px;
         font-size: 16px;
         line-height: 26px;
-        color: $fomt-color;
+        color: black;
     }
     @media (max-width: 1280px) {
         order: 2;
     }
 }
+
+.avatar {
+    width: 100%;
+}
+
 .avatar-wrapper {
     margin-left: auto;
+    height: 70%;
     img {
         height: 100%;
         object-fit: cover;
@@ -255,6 +291,7 @@ header {
 .projects-content {
     @include flex-col;
     gap: 32px;
+    padding-bottom: 70px;
 }
 
 .project {
@@ -345,9 +382,10 @@ header {
         object-fit: cover;
     }
 }
+
+
 label {
-    border: 1px solid black;
-    border-radius: 8px;
+    @include bor-bor;
     width: 495px;
     height: 57px;
     padding: 16px 0 16px 12px;
@@ -389,12 +427,12 @@ textarea{
     margin-bottom: 12px;
 }
 .finish {
-    border: 1px solid black;
+    @include bor-bor;
     width: 528px;
     text-align: center;
     padding: 21px 0;
     border-radius: 8px;
-    background-color: black;
+    background-color: $primary-color;
     color: #FFF;
 }
 .end {
