@@ -52,6 +52,9 @@ html {
     @media (max-width:480px) {
         font-size: 36px;
     }
+    @media (max-width: 360) {
+        font-size: 22px;
+    }
 }
 
 .inMini {
@@ -167,10 +170,19 @@ header {
         width: 40%;
         height: 100%;
         object-fit: cover;
+        @media (max-width: 1200px) {
+            // width: 80%;
+        }
+        @media (max-width: 800px) {
+            width: 100%;
+        }
     }
     @media (max-width: 1280px) {
         width: 100%;
         order: 1;
+    }
+    @media (max-width:480px) {
+        width: 100%;
     }
 }
 
@@ -181,9 +193,13 @@ header {
     flex-wrap: wrap;
     @media (max-width: 728px) {
         padding: 0 40px;
+        gap: 40px;
     }
     @media (max-width: 480px) {
         padding: 0 20px;
+    }
+    @media (max-width: 400px) {
+        gap: 15px;
     }
 }
 
@@ -199,10 +215,20 @@ header {
     @include bor-bor;
     i {
         font-size: $main-fz;
+        @media (max-width: 1280px) {
+            font-size: 24px
+        }
     }
     p {
         font-size: 18px;
         font-weight: 800;
+        @media (max-width: 1280px) {
+            font-size: 9px;
+        }
+    }
+    @media (max-width:1280px) {
+        width: 100px;
+        height: 94px;
     }
 }
 

@@ -29,6 +29,11 @@ html {
     font-size: 36px;
   }
 }
+@media (max-width: 360) {
+  .hero-title {
+    font-size: 22px;
+  }
+}
 
 .inMini {
   height: 40px;
@@ -199,12 +204,22 @@ header {
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media (max-width: 800px) {
+  .hero-image img {
+    width: 100%;
+  }
+}
 @media (max-width: 1280px) {
   .hero-image {
     width: 100%;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+  }
+}
+@media (max-width: 480px) {
+  .hero-image {
+    width: 100%;
   }
 }
 
@@ -222,11 +237,17 @@ header {
 @media (max-width: 728px) {
   .skills-container {
     padding: 0 40px;
+    gap: 40px;
   }
 }
 @media (max-width: 480px) {
   .skills-container {
     padding: 0 20px;
+  }
+}
+@media (max-width: 400px) {
+  .skills-container {
+    gap: 15px;
   }
 }
 
@@ -254,9 +275,25 @@ header {
 .skill-card i {
   font-size: 48px;
 }
+@media (max-width: 1280px) {
+  .skill-card i {
+    font-size: 24px;
+  }
+}
 .skill-card p {
   font-size: 18px;
   font-weight: 800;
+}
+@media (max-width: 1280px) {
+  .skill-card p {
+    font-size: 9px;
+  }
+}
+@media (max-width: 1280px) {
+  .skill-card {
+    width: 100px;
+    height: 94px;
+  }
 }
 
 .white {
