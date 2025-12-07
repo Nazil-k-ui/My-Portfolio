@@ -49,10 +49,10 @@ html {
 
 .hero-title {
     font-size: 48px;
-    @media (max-width:480px) {
-        font-size: 36px;
+    @media (max-width: 1280px) {
+        font-size: 34px;
     }
-    @media (max-width: 360) {
+    @media (max-width: 360px) {
         font-size: 22px;
     }
 }
@@ -106,7 +106,7 @@ header {
     position: relative;
     display: flex;
     padding: 0 32px;
-    @media (max-width: 1280px) {
+    @media (max-width: 960px) {
         flex-direction: column;
     }
 }
@@ -133,6 +133,10 @@ header {
     gap: 48px;
     height: 100%;
     @media (max-width: 1280px) {
+        // position: static;
+        // order: 2;
+    }
+    @media (max-width: 960px) {
         position: static;
         order: 2;
     }
@@ -159,27 +163,23 @@ header {
     font-size: 24px;
     font-weight: 400;
     color: $fomt-color;
+    @media (max-width: 1280px) {
+        max-width: 436px;
+    }
+    @media (max-width:960px) {
+        max-width: 701px;;
+    }
 }
 
 .hero-image {
     margin-left: auto;
-    width: 100%;
     display: flex;
     justify-content: end;
     img {
-        width: 40%;
-        height: 100%;
-        object-fit: cover;
-        @media (max-width: 1200px) {
-            // width: 80%;
-        }
-        @media (max-width: 800px) {
+        width: 50%;
+        @media (max-width: 960px) {
             width: 100%;
         }
-    }
-    @media (max-width: 1280px) {
-        width: 100%;
-        order: 1;
     }
     @media (max-width:480px) {
         width: 100%;
@@ -273,7 +273,7 @@ header {
     display: flex;
     justify-content: space-between;
     gap: 123px;
-    @media (max-width: 1280px) {
+    @media (max-width: 960px) {
        flex-direction: column;
        gap: 24px;
     }
@@ -290,7 +290,7 @@ header {
         line-height: 26px;
         color: black;
     }
-    @media (max-width: 1280px) {
+    @media (max-width: 960px) {
         order: 2;
     }
 }
@@ -306,7 +306,7 @@ header {
         height: 100%;
         object-fit: cover;
     }
-    @media (max-width: 1280px) {
+    @media (max-width: 960px) {
         width: 100%;
         order: 1;
     }
@@ -320,10 +320,11 @@ header {
     padding-bottom: 70px;
 }
 
+
 .project {
     display: flex;
     gap: 124px;
-    @media (max-width: 1280px) {
+    @media (max-width: 960px) {
         flex-direction: column;
         gap: 24px;
     }
@@ -344,13 +345,13 @@ header {
         max-width: 495px;
         .number {
             font-size: $main-fz;
-            @media (max-width:728px) {
+            @media (max-width: 960px) {
                 font-size: 36px;
             }
         }
         .project-title {
             font-size: 30px;
-            @media (max-width:728px) {
+            @media (max-width:960px) {
                 font-size: 24px;
             }
         }
@@ -369,14 +370,14 @@ header {
 .project:nth-child(even) {
     .project-image {
        order: 1;
-       @media (max-width: 1280px) {
+       @media (max-width: 960px) {
         order: 0;
        }
     }
 }
 
 .call-me {
-    @media (max-width:728px) {
+    @media (max-width: 960px) {
         flex-direction: column;
     }
 }
@@ -393,18 +394,20 @@ header {
         color: $fomt-color;
         line-height: 24px;
     }
-    @media (max-width:728px) {
-       order: 1;
+    @media (max-width:960px) {
+       order: -19;
     }
 }
 .form {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 495px;
     font-size: 18px;
-    @media (max-width:728px) {
+    @media (max-width: 960px) {
+        display: contents;
         order: 2;
-        gap: 24px;
+        // gap: 24px;
         object-fit: cover;
     }
 }
@@ -412,17 +415,11 @@ header {
 
 label {
     @include bor-bor;
-    width: 495px;
+    // width: 495px;
     height: 57px;
+    display: inline-block;
+    width: 100%;;
     padding: 16px 0 16px 12px;
-    @media (max-width: 480px) {
-        display: flex;
-        width: 440px;
-        padding: 0 20px;
-    }
-    @media (max-width: 360px) {
-        width: 320px;
-    }
 }
 .textarea {
     height: 200px;
@@ -437,8 +434,8 @@ textarea{
 .call-me {
     display: flex;
     justify-content: space-between;
-    gap: 123px;
-    @media (max-width:728px) {
+    gap: 20px;
+    @media (max-width: 960px) {
         gap: 24px;
     }
 }
@@ -454,15 +451,24 @@ textarea{
 }
 .finish {
     @include bor-bor;
-    width: 528px;
+    width: 100%;
     text-align: center;
     padding: 21px 0;
     border-radius: 8px;
     background-color: $primary-color;
     color: #FFF;
+    button {
+        display: contents;
+        width: 100%;
+    }
 }
+
 .end {
-    padding:20px 0 0 100px;
     display: flex;
-    gap: 24px;
+    padding-top: 20px;
+    justify-content: space-around;
+    gap: 20px;
+    @media (max-width: 728px) {
+        flex-direction: column;
+    }
 }
