@@ -332,11 +332,6 @@ header {
     order: 1;
   }
 }
-@media (max-width: 480px) {
-  .avatar-wrapper {
-    width: 440px;
-  }
-}
 
 .projects-content {
   display: flex;

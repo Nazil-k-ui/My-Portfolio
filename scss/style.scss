@@ -310,9 +310,6 @@ header {
         width: 100%;
         order: 1;
     }
-    @media (max-width:480px) {
-        width: 440px;
-    }
 }
 .projects-content {
     @include flex-col;
